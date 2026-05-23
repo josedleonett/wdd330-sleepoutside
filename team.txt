@@ -1,0 +1,3 @@
+Team Trello: https://trello.com/b/dckxktJT
+Owner: JosedLeonett
+Notes: Repo used as team repo for WDD-330 course.
