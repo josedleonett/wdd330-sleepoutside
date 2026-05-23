@@ -1,0 +1,61 @@
+{
+  "Count": 58,
+  "Page": 1,
+  "PerPage": 24,
+  "NextPageUrl": "/api/1.0/products/s~sleeping-bags/?page=2",
+  "LastPageUrl": "/api/1.0/products/s~sleeping-bags/?page=3",
+  "RefinementsUrl": "/api/1.0/refinements/search~sleeping-bags/",
+  "Title": "Search for \"sleeping bags\" ",
+  "Result": [
+    {
+      "Id": "927VJ",
+      "IsClearance": false,
+      "IsNew": false,
+      "Url": "/api/1.0/product/927vj/",
+      "WebUrl": "https://www.sierra.com/product/bounce/927vj/?filterString=s~sleeping-bags%2F",
+      "AffiliateWebUrl": "https://www.sierra.com/product/bounce/927vj/?filterString=s~sleeping-bags%2F",
+      "Reviews": {
+        "ReviewsUrl": "/api/1.0/reviewsbyproduct/927vj/",
+        "ReviewCount": 0,
+        "AverageRating": 0
+      },
+      "NameWithoutBrand": "20°F Pinole Sleeping Bag - Mummy (For Men and Women)",
+      "Name": "Mountain Hardwear 20°F Pinole Sleeping Bag - Mummy (For Men and Women)",
+      "IsFamousBrand": false,
+      "Images": {
+        "PrimarySmall": "https://i.stpost.com/mountain-hardwear-20-f-pinole-sleeping-bag-mummy-for-men-and-women-in-altitude-blue~p~927vj_01~80.jpg",
+        "PrimaryMedium": "https://i.stpost.com/mountain-hardwear-20-f-pinole-sleeping-bag-mummy-for-men-and-women-in-altitude-blue~p~927vj_01~160.jpg",
+        "PrimaryLarge": "https://i.stpost.com/mountain-hardwear-20-f-pinole-sleeping-bag-mummy-for-men-and-women-in-altitude-blue~p~927vj_01~320.jpg",
+        "PrimaryExtraLarge": "https://i.stpost.com/mountain-hardwear-20-f-pinole-sleeping-bag-mummy-for-men-and-women-in-altitude-blue~p~927vj_01~600.jpg",
+        "ExtraImages": [
+          {
+            "Title": "Alternate View",
+            "Src": "https://i.stpost.com/mountain-hardwear-20-f-pinole-sleeping-bag-mummy-for-men-and-women~a~927vj_2~600.2.jpg"
+          }
+        ]
+      },
+      "SizesAvailable": {
+        "ZIPPER": ["L"]
+      },
+      "Colors": [
+        {
+          "ColorCode": "01",
+          "ColorName": "Altitude Blue",
+          "ColorChipImageSrc": "https://s.stpost.com/eccstorefront/colorchip/927vj-01.jpg",
+          "ColorPreviewImageSrc": "https://i.stpost.com/mountain-hardwear-20-f-pinole-sleeping-bag-mummy-for-men-and-women-in-altitude-blue~p~927vj_01~160.jpg"
+        }
+      ],
+      "DescriptionHtmlSimple": "<strong>Excess</strong>. From spring to summer to fall, Mountain Hardwear&#39;s 20&#176; F Pinole sleeping bag delivers away-from-home comfort with its Thermal.Q synthetic insulation, tailored hood for sealing in heat and comfort footbox for just-right wiggle room.",
+      "SuggestedRetailPrice": 130,
+      "Brand": {
+        "Id": "13530",
+        "Url": "/api/1.0/brand/13530/",
+        "ProductsUrl": "/api/1.0/products/mountain-hardwear~b~13530/",
+        "LogoSrc": "https://i.stpost.com/mountain-hardwear-20-f-pinole-sleeping-bag-mummy-for-men-and-women~b~13530~160x100.jpg",
+        "Name": "Mountain Hardwear"
+      },
+      "ListPrice": 99.99,
+      "FinalPrice": 99.99
+    }
+  ]
+}

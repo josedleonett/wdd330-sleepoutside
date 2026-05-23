@@ -1,0 +1,63 @@
+{
+  "Count": 64,
+  "Page": 1,
+  "PerPage": 24,
+  "NextPageUrl": "/api/1.0/products/s~backpacks/?page=2",
+  "LastPageUrl": "/api/1.0/products/s~backpacks/?page=3",
+  "RefinementsUrl": "/api/1.0/refinements/search~backpacks/",
+  "Title": "Search for \"backpacks\" ",
+  "Result": [
+    {
+      "Id": "223RN",
+      "IsClearance": false,
+      "IsNew": false,
+      "Url": "/api/1.0/product/223rn/",
+      "WebUrl": "https://www.sierra.com/product/bounce/223rn/?filterString=s~backpacks%2F",
+      "AffiliateWebUrl": "https://www.sierra.com/product/bounce/223rn/?filterString=s~backpacks%2F",
+      "Reviews": {
+        "ReviewsUrl": "/api/1.0/reviewsbyproduct/223rn/",
+        "ReviewCount": 11,
+        "AverageRating": 4.64
+      },
+      "NameWithoutBrand": "Zulu 55 Backpack - Internal Frame",
+      "Name": "Gregory Zulu 55 Backpack - Internal Frame",
+      "IsFamousBrand": false,
+      "Images": {
+        "PrimarySmall": "https://i.stpost.com/gregory-zulu-55-backpack-internal-frame-in-moss-green~p~223rn_02~80.jpg",
+        "PrimaryMedium": "https://i.stpost.com/gregory-zulu-55-backpack-internal-frame-in-moss-green~p~223rn_02~160.jpg",
+        "PrimaryLarge": "https://i.stpost.com/gregory-zulu-55-backpack-internal-frame-in-moss-green~p~223rn_02~320.jpg",
+        "PrimaryExtraLarge": "https://i.stpost.com/gregory-zulu-55-backpack-internal-frame-in-moss-green~p~223rn_02~600.jpg",
+        "ExtraImages": [
+          {
+            "Title": "Alternate View",
+            "Src": "https://i.stpost.com/gregory-zulu-55-backpack-internal-frame~a~223rn_2~600.2.jpg"
+          },
+          {
+            "Title": "Alternate View",
+            "Src": "https://i.stpost.com/gregory-zulu-55-backpack-internal-frame~a~223rn_3~600.1.jpg"
+          }
+        ]
+      },
+      "SizesAvailable": { "SIZE": ["M", "L"] },
+      "Colors": [
+        {
+          "ColorCode": "02",
+          "ColorName": "Moss Green",
+          "ColorChipImageSrc": "https://s.stpost.com/eccstorefront/colorchip/223rn-02.jpg",
+          "ColorPreviewImageSrc": "https://i.stpost.com/gregory-zulu-55-backpack-internal-frame-in-moss-green~p~223rn_02~160.jpg"
+        }
+      ],
+      "DescriptionHtmlSimple": "<strong><a class=\"glossaryTermLink\" href=\"/closeouts~g~2312\" title=\"Closeouts: - Closeouts are items that may be last year's model or color. While closeout items are often offered at discounted prices, the products themselves are always high quality. Closeout items can include anything from shoes, underwear and apparel, to rugs, tents and outdoor equipment. Closeouts are often a high percentage off the retail price.\">Closeouts</a></strong>. Gregory&#39;s Zulu 55 backpack boasts a streamlined, yet spacious design ideal for weekend trips and winter overnights. The highly breathable CrossFlo DTS suspension system keeps air circulating across your back, and the bottom compartment offers easy access to your sleeping bag.",
+      "SuggestedRetailPrice": 199.0,
+      "Brand": {
+        "Id": "7155",
+        "Url": "/api/1.0/brand/7155/",
+        "ProductsUrl": "/api/1.0/products/gregory~b~7155/",
+        "LogoSrc": "https://i.stpost.com/gregory-zulu-55-backpack-internal-frame~b~7155~160x100.jpg",
+        "Name": "Gregory"
+      },
+      "ListPrice": 129.99,
+      "FinalPrice": 129.99
+    }
+  ]
+}
