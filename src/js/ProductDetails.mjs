@@ -36,10 +36,7 @@ export default class ProductDetails {
       nameEl.textContent =
         this.product.NameWithoutBrand || this.product.Name || '';
     if (imgEl) {
-      let src = (this.product.Image || '').replace(/^\.\.\//, '');
-      if (src && !src.startsWith('/') && !src.startsWith('http'))
-        src = '/' + src;
-      imgEl.src = src;
+      imgEl.src = this.product.Images?.PrimaryLarge || '';
     }
     if (priceEl)
       priceEl.textContent = `$${(this.product.FinalPrice ?? this.product.ListPrice ?? 0).toFixed(2)}`;
