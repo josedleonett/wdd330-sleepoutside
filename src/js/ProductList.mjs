@@ -1,12 +1,12 @@
-import { renderListWithTemplate } from "./utils.mjs";
+import { renderListWithTemplate } from './utils.mjs';
 
 function productCardTemplate(product) {
-  let imgSrc = product.Image ? product.Image.replace(/^\.\.\//, "") : "";
-  if (imgSrc && !imgSrc.startsWith("/") && !imgSrc.startsWith("http")) {
-    imgSrc = "/" + imgSrc;
+  let imgSrc = product.Image ? product.Image.replace(/^\.\.\//, '') : '';
+  if (imgSrc && !imgSrc.startsWith('/') && !imgSrc.startsWith('http')) {
+    imgSrc = '/' + imgSrc;
   }
-  const brand = (product.Brand && product.Brand.Name) || "";
-  const name = product.NameWithoutBrand || product.Name || "";
+  const brand = (product.Brand && product.Brand.Name) || '';
+  const name = product.NameWithoutBrand || product.Name || '';
   const price = (product.FinalPrice ?? product.ListPrice ?? 0).toFixed(2);
 
   return `
@@ -34,7 +34,7 @@ export default class ProductList {
     this.renderList(this.products);
   }
 
-  renderList(list, templateFn = productCardTemplate, position = "afterbegin", clear = true) {
+  renderList(list, templateFn = productCardTemplate, position = 'afterbegin', clear = true) {
     renderListWithTemplate(templateFn, this.listElement, list, position, clear);
   }
 }

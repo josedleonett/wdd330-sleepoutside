@@ -15,21 +15,36 @@ export function setLocalStorage(key, data) {
 }
 // set a listener for both touchend and click
 export function setClick(selector, callback) {
-  qs(selector).addEventListener("touchend", (event) => {
+  qs(selector).addEventListener('touchend', (event) => {
     event.preventDefault();
     callback();
   });
-  qs(selector).addEventListener("click", callback);
+  qs(selector).addEventListener('click', callback);
+}
+
+export function updateCartCount() {
+  const cart = getLocalStorage('so-cart');
+  const count = Array.isArray(cart) ? cart.length : 0;
+  const cartIcon = document.querySelector('.cart a');
+  if (!cartIcon) return;
+  let badge = cartIcon.querySelector('.cart-count');
+  if (!badge) {
+    badge = document.createElement('span');
+    badge.className = 'cart-count';
+    cartIcon.appendChild(badge);
+  }
+  badge.textContent = count;
+  badge.style.display = count > 0 ? 'inline-block' : 'none';
 }
 
 export function renderListWithTemplate(
   templateFn,
   parentElement,
   list,
-  position = "afterbegin",
+  position = 'afterbegin',
   clear = false
 ) {
-  if (clear) parentElement.innerHTML = "";
+  if (clear) parentElement.innerHTML = '';
   const htmlStrings = list.map(templateFn);
-  parentElement.insertAdjacentHTML(position, htmlStrings.join(""));
+  parentElement.insertAdjacentHTML(position, htmlStrings.join(''));
 }
