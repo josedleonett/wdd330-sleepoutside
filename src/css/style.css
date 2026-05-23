@@ -172,6 +172,56 @@ button {
   padding: 1rem;
 }
 
+.category-list {
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.category-list h2 {
+  margin-bottom: 1rem;
+}
+
+.category-list ul {
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.category-list li {
+  flex: 1 1 40%;
+  max-width: 180px;
+  text-align: center;
+}
+
+.category-list a {
+  text-decoration: none;
+  color: var(--dark-grey);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border: 1px solid var(--light-grey);
+  border-radius: 4px;
+  transition: border-color 0.2s;
+}
+
+.category-list a:hover {
+  border-color: var(--primary-color);
+}
+
+.category-list img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.category-list h3 {
+  font-size: 1rem;
+}
+
 .product-list {
   display: flex;
   flex-flow: row wrap;
