@@ -34,15 +34,15 @@ function updateCartTotal(cartItems) {
     (sum, item) => sum + (item.FinalPrice || 0) * (item.Quantity || 1),
     0
   );
-  let totalEl = document.querySelector('.cart-total');
-  if (!totalEl) {
-    totalEl = document.createElement('p');
-    totalEl.className = 'cart-total';
-    document.querySelector('.products').appendChild(totalEl);
+  const totalEl = document.querySelector('.cart-total');
+  const checkoutLink = document.querySelector('.checkout-link');
+  if (cartItems.length) {
+    totalEl.textContent = `Subtotal (${cartItems.length} item${cartItems.length > 1 ? 's' : ''}): $${total.toFixed(2)}`;
+    checkoutLink.style.display = '';
+  } else {
+    totalEl.textContent = 'Your cart is empty.';
+    checkoutLink.style.display = 'none';
   }
-  totalEl.textContent = cartItems.length
-    ? `Total: $${total.toFixed(2)}`
-    : 'Your cart is empty.';
 }
 
 document.querySelector('.product-list').addEventListener('click', (e) => {
