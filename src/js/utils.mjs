@@ -74,3 +74,12 @@ export async function loadHeaderFooter(callback) {
   renderWithTemplate(headerTemplate, headerElement, null, callback);
   renderWithTemplate(footerTemplate, footerElement);
 }
+
+export function alertMessage(message, scroll = true) {
+  const alert = document.createElement('div');
+  alert.className = 'alert-message';
+  alert.innerHTML = `<p>${message}</p><button class="alert-message__close" aria-label="Close">&times;</button>`;
+  alert.querySelector('.alert-message__close').addEventListener('click', () => alert.remove());
+  document.querySelector('main').prepend(alert);
+  if (scroll) window.scrollTo({ top: 0, behavior: 'smooth' });
+}

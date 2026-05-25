@@ -1,4 +1,4 @@
-import { loadHeaderFooter } from './utils.mjs';
+import { loadHeaderFooter, alertMessage } from './utils.mjs';
 import CheckoutProcess from './CheckoutProcess.mjs';
 
 loadHeaderFooter();
@@ -12,12 +12,15 @@ document.querySelector('#zip').addEventListener('blur', () => {
 
 document.querySelector('#checkout-form').addEventListener('submit', async (e) => {
   e.preventDefault();
+  const form = e.target;
+  if (!form.checkValidity()) {
+    form.reportValidity();
+    return;
+  }
   try {
-    const result = await checkout.checkout(e.target);
-    console.log('Order success:', result);
-    alert('Order placed successfully!');
+    await checkout.checkout(form);
   } catch (err) {
-    console.error('Order failed:', err);
-    alert('Order failed. Please try again.');
+    const msg = err?.message?.message || err?.message || 'Order failed. Please try again.';
+    alertMessage(typeof msg === 'string' ? msg : JSON.stringify(msg));
   }
 });

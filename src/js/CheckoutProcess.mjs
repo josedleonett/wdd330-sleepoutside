@@ -1,4 +1,4 @@
-import { getLocalStorage } from './utils.mjs';
+import { getLocalStorage, setLocalStorage } from './utils.mjs';
 import ExternalServices from './ExternalServices.mjs';
 
 const TAX_RATE = 0.06;
@@ -47,13 +47,19 @@ export default class CheckoutProcess {
   }
 
   async checkout(form) {
-    const formData = new FormData(form);
-    const order = Object.fromEntries(formData);
-    order.orderDate = new Date().toISOString();
-    order.orderTotal = this.orderTotal.toFixed(2);
-    order.tax = this.tax.toFixed(2);
-    order.shipping = this.shipping;
-    order.items = packageItems(this.cartItems);
-    return this.services.checkout(order);
+    try {
+      const formData = new FormData(form);
+      const order = Object.fromEntries(formData);
+      order.orderDate = new Date().toISOString();
+      order.orderTotal = this.orderTotal.toFixed(2);
+      order.tax = this.tax.toFixed(2);
+      order.shipping = this.shipping;
+      order.items = packageItems(this.cartItems);
+      await this.services.checkout(order);
+      setLocalStorage('so-cart', []);
+      window.location.href = '/checkout/success.html';
+    } catch (err) {
+      throw err;
+    }
   }
 }
