@@ -17,3 +17,15 @@ if (titleEl) {
     .replace(/\b\w/g, (c) => c.toUpperCase());
   titleEl.textContent = `Top Products: ${formatted}`;
 }
+
+const sortSelect = document.querySelector('#sort-select');
+if (sortSelect) {
+  sortSelect.addEventListener('change', () => {
+    const value = sortSelect.value;
+    if (value === 'default') {
+      myList.renderList(myList.products);
+    } else {
+      myList.sortProducts(value);
+    }
+  });
+}

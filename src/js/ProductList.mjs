@@ -31,6 +31,15 @@ export default class ProductList {
     this.renderList(this.products);
   }
 
+  sortProducts(order) {
+    const sorted = [...this.products].sort((a, b) => {
+      const priceA = a.FinalPrice ?? a.ListPrice ?? 0;
+      const priceB = b.FinalPrice ?? b.ListPrice ?? 0;
+      return order === 'asc' ? priceA - priceB : priceB - priceA;
+    });
+    this.renderList(sorted);
+  }
+
   renderList(list, templateFn = productCardTemplate, position = 'afterbegin', clear = true) {
     renderListWithTemplate(templateFn, this.listElement, list, position, clear);
   }

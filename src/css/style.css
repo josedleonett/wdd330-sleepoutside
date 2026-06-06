@@ -259,6 +259,34 @@ button {
 
 /* End product list card */
 
+.product-listing__controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  padding: 0 0.5em 0.5em;
+}
+
+.sort-select {
+  padding: 0.4em 0.75em;
+  border: 1px solid var(--light-grey);
+  border-radius: 4px;
+  font-size: var(--small-font);
+  cursor: pointer;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 .product-detail {
   padding: 1em;
   max-width: 500px;
